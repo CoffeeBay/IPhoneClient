@@ -14,7 +14,7 @@ class MusicPlayViewController: UIViewController {
 
     var musics: [MPMediaItem] = []
     var nowPlayingMusicSequence = 0
-    var baseURL: String!
+    var baseURL: String?
     var isPlaying = true
     var musicPlayer = MPMusicPlayerController()
     
@@ -26,9 +26,18 @@ class MusicPlayViewController: UIViewController {
         if isPlaying {
             musicPlayer.stop()
             self.playStopBtn.setBackgroundImage(UIImage(named: "ic_play_arrow"), for: .normal)
+            
+            Alamofire.request("\(baseURL!)stop", method: .get).responseString { (response) in
+                print(response.result)
+            }
         } else {
             musicPlayer.play()
             self.playStopBtn.setBackgroundImage(UIImage(named: "ic_stop"), for: .normal)
+            
+            let parameters: Parameters = ["musicIndex": nowPlayingMusicSequence]
+            Alamofire.request("\(baseURL!)play", method: .get, parameters: parameters).responseString { (response) in
+                print(response.result)
+            }
         }
         
         isPlaying = !isPlaying
@@ -74,6 +83,13 @@ class MusicPlayViewController: UIViewController {
                 self.imageView.image = UIImage(named: "neyo-so sick")
                 self.titleLabel.text = title
             }
+        }
+        
+        print("baseURL = \(baseURL!)")
+        print("nowPlayingMusicSequence = \(nowPlayingMusicSequence)")
+        let parameters: Parameters = ["musicIndex": nowPlayingMusicSequence]
+        Alamofire.request("\(baseURL!)play", method: .get, parameters: parameters).responseString { (response) in
+            dump(response.result)
         }
     }
 }
