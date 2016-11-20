@@ -13,9 +13,12 @@
 		905AD3771DE0A84400359426 /* IDontCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 905AD3751DE0A84400359426 /* IDontCare.xcdatamodeld */; };
 		905AD3791DE0A84400359426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 905AD3781DE0A84400359426 /* Assets.xcassets */; };
 		905AD37C1DE0A84400359426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905AD37A1DE0A84400359426 /* LaunchScreen.storyboard */; };
+		905AD3841DE1703E00359426 /* MusicPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AD3831DE1703E00359426 /* MusicPlayViewController.swift */; };
+		E6BA2E230BE52A50CEE868BB /* Pods_IDontCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11CCC3A3AD536DFC7D97BAF /* Pods_IDontCare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63B2D6600F15DD00DE7E8AF9 /* Pods-IDontCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDontCare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDontCare/Pods-IDontCare.debug.xcconfig"; sourceTree = "<group>"; };
 		905AD36B1DE0A84400359426 /* IDontCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDontCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		905AD36E1DE0A84400359426 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		905AD3701DE0A84400359426 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		905AD3781DE0A84400359426 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		905AD37B1DE0A84400359426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		905AD37D1DE0A84400359426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		905AD3831DE1703E00359426 /* MusicPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayViewController.swift; sourceTree = "<group>"; };
+		E3FED3DE16867A087D102764 /* Pods-IDontCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDontCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDontCare/Pods-IDontCare.release.xcconfig"; sourceTree = "<group>"; };
+		F11CCC3A3AD536DFC7D97BAF /* Pods_IDontCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDontCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6BA2E230BE52A50CEE868BB /* Pods_IDontCare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EDE8EB77FF83241DD42FE55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63B2D6600F15DD00DE7E8AF9 /* Pods-IDontCare.debug.xcconfig */,
+				E3FED3DE16867A087D102764 /* Pods-IDontCare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		905AD3621DE0A84400359426 = {
 			isa = PBXGroup;
 			children = (
 				905AD36D1DE0A84400359426 /* IDontCare */,
 				905AD36C1DE0A84400359426 /* Products */,
+				8EDE8EB77FF83241DD42FE55 /* Pods */,
+				D4D7F58F9B85819A929007D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,7 @@
 			children = (
 				905AD36E1DE0A84400359426 /* AppDelegate.swift */,
 				905AD3701DE0A84400359426 /* ViewController.swift */,
+				905AD3831DE1703E00359426 /* MusicPlayViewController.swift */,
 				905AD3721DE0A84400359426 /* Main.storyboard */,
 				905AD3781DE0A84400359426 /* Assets.xcassets */,
 				905AD37A1DE0A84400359426 /* LaunchScreen.storyboard */,
@@ -67,6 +86,14 @@
 			path = IDontCare;
 			sourceTree = "<group>";
 		};
+		D4D7F58F9B85819A929007D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F11CCC3A3AD536DFC7D97BAF /* Pods_IDontCare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 905AD3801DE0A84400359426 /* Build configuration list for PBXNativeTarget "IDontCare" */;
 			buildPhases = (
+				1CF7A57003B4A2F896DA0AD8 /* [CP] Check Pods Manifest.lock */,
 				905AD3671DE0A84400359426 /* Sources */,
 				905AD3681DE0A84400359426 /* Frameworks */,
 				905AD3691DE0A84400359426 /* Resources */,
+				17BD1179670B37FDA6083D92 /* [CP] Embed Pods Frameworks */,
+				9DA7114C94FAFF337DEA22A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +165,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17BD1179670B37FDA6083D92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IDontCare/Pods-IDontCare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CF7A57003B4A2F896DA0AD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9DA7114C94FAFF337DEA22A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IDontCare/Pods-IDontCare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		905AD3671DE0A84400359426 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -142,6 +220,7 @@
 			files = (
 				905AD3711DE0A84400359426 /* ViewController.swift in Sources */,
 				905AD3771DE0A84400359426 /* IDontCare.xcdatamodeld in Sources */,
+				905AD3841DE1703E00359426 /* MusicPlayViewController.swift in Sources */,
 				905AD36F1DE0A84400359426 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +342,7 @@
 		};
 		905AD3811DE0A84400359426 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63B2D6600F15DD00DE7E8AF9 /* Pods-IDontCare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8S882ZSFK3;
@@ -276,6 +356,7 @@
 		};
 		905AD3821DE0A84400359426 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3FED3DE16867A087D102764 /* Pods-IDontCare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8S882ZSFK3;
@@ -306,6 +387,7 @@
 				905AD3821DE0A84400359426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
